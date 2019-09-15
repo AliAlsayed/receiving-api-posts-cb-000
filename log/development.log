@@ -6836,3 +6836,23 @@ Processing by PostsController#create as */*
   [1m[35m (2.2ms)[0m  commit transaction
 Redirected to http://178.128.194.189:43347/posts/15
 Completed 200 OK in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/15" for 5.32.97.110 at 2019-09-15 07:10:45 +0000
+Cannot render console from 5.32.97.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/15" for 138.197.202.197 at 2019-09-15 07:10:45 +0000
+Cannot render console from 138.197.202.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.2ms)
