@@ -17,7 +17,11 @@
     $('form').submit(function(event){
       event.preventDefault();
       var values = $(this).serialize();
-      var posting = $.post('/posts', values)
-    })
-  })
+      var posting = $.post('/posts', values);
+
+      post.done(function(data){
+        
+      });
+    });
+  });
 </script>
